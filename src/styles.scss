@@ -455,3 +455,24 @@ ul, ol { list-style: none; }
 .cost-asterisk { font-size: 14px; vertical-align: super; }
 .cost-note { font-size: 10px; color: var(--color-muted); font-family: var(--font-mono); max-width: 240px; }
 .arch-footer-quote { text-align: center; font-style: italic; font-size: 13px; color: var(--color-muted); padding: 12px 0; border-top: 1px solid var(--color-border); font-family: var(--font-mono); }
+
+/* Disclaimer Banner */
+.arch-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(251, 191, 36, 0.06));
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  margin-bottom: 4px;
+}
+.dark .arch-disclaimer {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(251, 191, 36, 0.08));
+  border-color: rgba(245, 158, 11, 0.3);
+}
+.disclaimer-icon { font-size: 20px; color: #f59e0b; flex-shrink: 0; margin-top: 1px; }
+.disclaimer-content { display: flex; flex-direction: column; gap: 4px; }
+.disclaimer-title { font-size: 13px; font-weight: 600; color: #d97706; font-family: var(--font-mono); }
+.dark .disclaimer-title { color: #fbbf24; }
+.disclaimer-text { font-size: 12px; color: var(--color-subtext); line-height: 1.5; font-family: var(--font-mono); }

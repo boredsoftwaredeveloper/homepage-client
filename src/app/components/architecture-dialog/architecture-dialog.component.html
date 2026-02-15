@@ -16,6 +16,15 @@
     </div>
   </div>
 
+  <!-- Status Disclaimer -->
+  <div class="arch-disclaimer">
+    <span class="material-symbols-outlined disclaimer-icon">construction</span>
+    <div class="disclaimer-content">
+      <span class="disclaimer-title">Currently vibes-only (static FE)</span>
+      <span class="disclaimer-text">Everything you see here is the blueprint — the backend exists in code, not in the cloud (yet). Once GCP Cloud Run is up and running, this whole diagram becomes real. Until then, it's just an Angular app flexing a Swagger doc it can't actually call. Bear with me.</span>
+    </div>
+  </div>
+
   <!-- Visual Architecture Diagram -->
   <div class="arch-diagram-section">
     <h3 class="arch-section-title">
@@ -69,7 +78,7 @@
       <!-- Flow Arrow (branching) -->
       <div class="flow-arrow">
         <div class="flow-line"></div>
-        <span class="flow-label">Route + LB</span>
+        <span class="flow-label">Static Routes</span>
         <div class="flow-line"></div>
       </div>
 
@@ -81,7 +90,7 @@
             <span class="material-symbols-outlined node-icon">person</span>
             <div class="node-info">
               <span class="node-label">Profile Service</span>
-              <span class="node-sublabel">Hero, About, Experience...</span>
+              <span class="node-sublabel">Profile, Experience, Achievements</span>
             </div>
           </div>
           <div class="arch-node node-service">
@@ -120,35 +129,18 @@
             </div>
           </div>
           <div class="arch-node node-data">
-            <span class="material-symbols-outlined node-icon">analytics</span>
+            <span class="material-symbols-outlined node-icon">timeline</span>
             <div class="node-info">
-              <span class="node-label">BigQuery</span>
-              <span class="node-sublabel">Analytics</span>
+              <span class="node-label">Cloud Trace</span>
+              <span class="node-sublabel">Distributed Tracing</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Infrastructure sidebar -->
+      <!-- Observability sidebar -->
       <div class="arch-sidebar">
-        <div class="sidebar-label">Infrastructure</div>
-        <div class="sidebar-nodes">
-          <div class="arch-node node-infra">
-            <span class="material-symbols-outlined node-icon">hub</span>
-            <div class="node-info">
-              <span class="node-label">Eureka</span>
-              <span class="node-sublabel">Discovery</span>
-            </div>
-          </div>
-          <div class="arch-node node-infra">
-            <span class="material-symbols-outlined node-icon">settings</span>
-            <div class="node-info">
-              <span class="node-label">Config</span>
-              <span class="node-sublabel">Git + Secrets</span>
-            </div>
-          </div>
-        </div>
-        <div class="sidebar-label" style="margin-top: 12px;">Observability</div>
+        <div class="sidebar-label">Observability</div>
         <div class="sidebar-nodes">
           <div class="arch-node node-obs">
             <span class="material-symbols-outlined node-icon">timeline</span>
@@ -162,6 +154,23 @@
             <div class="node-info">
               <span class="node-label">Monitoring</span>
               <span class="node-sublabel">Micrometer</span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-label" style="margin-top: 12px;">Config</div>
+        <div class="sidebar-nodes">
+          <div class="arch-node node-obs">
+            <span class="material-symbols-outlined node-icon">settings</span>
+            <div class="node-info">
+              <span class="node-label">Env Vars</span>
+              <span class="node-sublabel">Cloud Run</span>
+            </div>
+          </div>
+          <div class="arch-node node-obs">
+            <span class="material-symbols-outlined node-icon">lock</span>
+            <div class="node-info">
+              <span class="node-label">Secret Manager</span>
+              <span class="node-sublabel">GCP</span>
             </div>
           </div>
         </div>
