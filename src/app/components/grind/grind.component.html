@@ -1,0 +1,26 @@
+<div class="grind-card glass-card">
+  <h2 class="section-heading">
+    <span class="material-symbols-outlined section-icon">work_history</span>
+    The Grind
+  </h2>
+
+  <div class="timeline">
+    @for (exp of experience; track exp.id; let isLast = $last) {
+      <div class="timeline-item" [class.no-pad]="isLast">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-header">
+          <h3 class="company-name">{{ exp.company }}</h3>
+
+          @if (exp.roleStyle === 'badge') {
+            <span class="role-badge role-badge-green">{{ exp.role }}</span>
+          } @else {
+            <span class="role-badge role-badge-default">{{ exp.role }}</span>
+          }
+        </div>
+
+        <p class="timeline-desc">{{ exp.description }}</p>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="page-container">
+  <app-header />
+
+  <div class="hero-about-row">
+    <div class="hero-col" (click)="openCard('hero')">
+      <app-hero />
+    </div>
+    <div class="about-col" (click)="openCard('about')">
+      <app-about />
+    </div>
+  </div>
+
+  <app-paper-trail />
+
+  <div class="main-content-row">
+    <div class="left-col">
+      <div (click)="openCard('grind')">
+        <app-grind />
+      </div>
+      <div (click)="openCard('achievements')">
+        <app-achievements />
+      </div>
+      <div (click)="openCard('aspirations')">
+        <app-aspirations />
+      </div>
+    </div>
+    <div class="right-col" (click)="openCard('regret-stream')">
+      <app-regret-stream />
+    </div>
+  </div>
+
+  <app-footer />
+</div>
+
+<!-- Modal overlay -->
+@if (expandedCard) {
+  <div class="modal-overlay" (click)="onOverlayClick($event)" (keydown.escape)="closeCard()">
+    <div class="modal-content">
+      <button class="modal-close" (click)="closeCard()" aria-label="Close">
+        <span class="material-icons-outlined">keyboard_arrow_down</span>
+      </button>
+
+      @switch (expandedCard) {
+        @case ('hero') { <app-hero /> }
+        @case ('about') { <app-about /> }
+        @case ('grind') { <app-grind /> }
+        @case ('achievements') { <app-achievements /> }
+        @case ('aspirations') { <app-aspirations /> }
+        @case ('regret-stream') { <app-regret-stream /> }
+      }
+    </div>
+  </div>
+}

@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <p class="footer-disclaimer">{{ footer.disclaimer }}</p>
+  <div class="footer-links">
+    @for (link of footer.links; track link.label) {
+      <a [href]="link.href" target="_blank" class="footer-link">{{ link.label }}</a>
+    }
+  </div>
+</footer>

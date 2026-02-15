@@ -1,0 +1,27 @@
+<div class="aspirations-card glass-card">
+  <h3 class="section-heading">
+    <span class="material-symbols-outlined section-icon">rocket_launch</span>
+    Delusional Aspirations
+  </h3>
+
+  <div class="aspirations-list">
+    @for (item of aspirations; track item.id) {
+      <div class="aspiration-item">
+        <div class="aspiration-header">
+          <span class="aspiration-title">{{ item.title }}</span>
+          <span class="aspiration-status" [class]="'status-' + item.variant">{{ item.statusText }}</span>
+        </div>
+
+        <div class="aspiration-subtitle">{{ item.subtitle }}</div>
+
+        <div class="progress-track">
+          <div class="progress-fill" [class]="'fill-' + item.variant" [class.progress-bar-stripes]="item.animated" [class.animate-pulse]="item.animated" [style.width.%]="item.progressPercent"></div>
+        </div>
+
+        @if (item.footerText) {
+          <p class="aspiration-footer">{{ item.footerText }}</p>
+        }
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,9 @@
+export { HeaderComponent } from './header/header.component';
+export { HeroComponent } from './hero/hero.component';
+export { AboutComponent } from './about/about.component';
+export { PaperTrailComponent } from './paper-trail/paper-trail.component';
+export { GrindComponent } from './grind/grind.component';
+export { AchievementsComponent } from './achievements/achievements.component';
+export { AspirationsComponent } from './aspirations/aspirations.component';
+export { RegretStreamComponent } from './regret-stream/regret-stream.component';
+export { FooterComponent } from './footer/footer.component';
