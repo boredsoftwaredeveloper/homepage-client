@@ -1,0 +1,256 @@
+<div class="arch-dialog">
+  <!-- Header -->
+  <div class="arch-header">
+    <div class="arch-header-left">
+      <span class="material-symbols-outlined arch-header-icon">account_tree</span>
+      <div>
+        <h2 class="arch-title">System Architecture</h2>
+        <p class="arch-subtitle">boredsoftwaredeveloper.xyz — Over-Engineered &amp; Proud</p>
+      </div>
+    </div>
+    <div class="arch-header-actions">
+      <button class="arch-download-btn" (click)="downloadArchDoc()" title="Download Architecture Document">
+        <span class="material-symbols-outlined">download</span>
+        <span class="btn-text">Download Doc</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Visual Architecture Diagram -->
+  <div class="arch-diagram-section">
+    <h3 class="arch-section-title">
+      <span class="material-symbols-outlined">lan</span>
+      Architecture Overview
+    </h3>
+
+    <div class="arch-diagram">
+      <!-- Client Layer -->
+      <div class="arch-layer layer-client">
+        <div class="layer-label">Client</div>
+        <div class="arch-node node-client">
+          <span class="material-symbols-outlined node-icon">language</span>
+          <div class="node-info">
+            <span class="node-label">Angular 19 SPA</span>
+            <span class="node-sublabel">Vercel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow Arrow -->
+      <div class="flow-arrow">
+        <div class="flow-line"></div>
+        <span class="flow-label">HTTPS</span>
+        <div class="flow-line"></div>
+      </div>
+
+      <!-- Edge Layer -->
+      <div class="arch-layer layer-edge">
+        <div class="layer-label">Edge</div>
+        <div class="arch-node node-edge">
+          <span class="material-symbols-outlined node-icon">router</span>
+          <div class="node-info">
+            <span class="node-label">API Gateway</span>
+            <span class="node-sublabel">Auth · Rate Limit · Circuit Breaker</span>
+          </div>
+        </div>
+        <div class="edge-badges">
+          <span class="edge-badge badge-security">
+            <span class="material-symbols-outlined">shield</span> JWT
+          </span>
+          <span class="edge-badge badge-resilience">
+            <span class="material-symbols-outlined">bolt</span> Resilience4j
+          </span>
+          <span class="edge-badge badge-rate">
+            <span class="material-symbols-outlined">speed</span> Rate Limit
+          </span>
+        </div>
+      </div>
+
+      <!-- Flow Arrow (branching) -->
+      <div class="flow-arrow">
+        <div class="flow-line"></div>
+        <span class="flow-label">Route + LB</span>
+        <div class="flow-line"></div>
+      </div>
+
+      <!-- Service Layer -->
+      <div class="arch-layer layer-services">
+        <div class="layer-label">Services</div>
+        <div class="services-row">
+          <div class="arch-node node-service">
+            <span class="material-symbols-outlined node-icon">person</span>
+            <div class="node-info">
+              <span class="node-label">Profile Service</span>
+              <span class="node-sublabel">Hero, About, Experience...</span>
+            </div>
+          </div>
+          <div class="arch-node node-service">
+            <span class="material-symbols-outlined node-icon">dynamic_feed</span>
+            <div class="node-info">
+              <span class="node-label">Regret Stream</span>
+              <span class="node-sublabel">Feed Posts, Hashtags</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow Arrow -->
+      <div class="flow-arrow">
+        <div class="flow-line"></div>
+        <span class="flow-label">CRUD + Cache</span>
+        <div class="flow-line"></div>
+      </div>
+
+      <!-- Data Layer -->
+      <div class="arch-layer layer-data">
+        <div class="layer-label">Data</div>
+        <div class="services-row">
+          <div class="arch-node node-data">
+            <span class="material-symbols-outlined node-icon">storage</span>
+            <div class="node-info">
+              <span class="node-label">PostgreSQL</span>
+              <span class="node-sublabel">Supabase</span>
+            </div>
+          </div>
+          <div class="arch-node node-data">
+            <span class="material-symbols-outlined node-icon">bolt</span>
+            <div class="node-info">
+              <span class="node-label">Redis</span>
+              <span class="node-sublabel">Upstash</span>
+            </div>
+          </div>
+          <div class="arch-node node-data">
+            <span class="material-symbols-outlined node-icon">analytics</span>
+            <div class="node-info">
+              <span class="node-label">BigQuery</span>
+              <span class="node-sublabel">Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infrastructure sidebar -->
+      <div class="arch-sidebar">
+        <div class="sidebar-label">Infrastructure</div>
+        <div class="sidebar-nodes">
+          <div class="arch-node node-infra">
+            <span class="material-symbols-outlined node-icon">hub</span>
+            <div class="node-info">
+              <span class="node-label">Eureka</span>
+              <span class="node-sublabel">Discovery</span>
+            </div>
+          </div>
+          <div class="arch-node node-infra">
+            <span class="material-symbols-outlined node-icon">settings</span>
+            <div class="node-info">
+              <span class="node-label">Config</span>
+              <span class="node-sublabel">Git + Secrets</span>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-label" style="margin-top: 12px;">Observability</div>
+        <div class="sidebar-nodes">
+          <div class="arch-node node-obs">
+            <span class="material-symbols-outlined node-icon">timeline</span>
+            <div class="node-info">
+              <span class="node-label">Cloud Trace</span>
+              <span class="node-sublabel">Zipkin</span>
+            </div>
+          </div>
+          <div class="arch-node node-obs">
+            <span class="material-symbols-outlined node-icon">monitoring</span>
+            <div class="node-info">
+              <span class="node-label">Monitoring</span>
+              <span class="node-sublabel">Micrometer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Layers -->
+  <div class="arch-detail-section">
+    <h3 class="arch-section-title">
+      <span class="material-symbols-outlined">shield</span>
+      Security Layers (8 Deep)
+    </h3>
+    <div class="security-stack">
+      @for (layer of securityLayers; track layer; let i = $index) {
+        <div class="security-layer" [style.--layer-index]="i">
+          <span class="layer-num">{{ i + 1 }}</span>
+          <span class="layer-text">{{ layer }}</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Tech Stack Grid -->
+  <div class="arch-detail-section">
+    <h3 class="arch-section-title">
+      <span class="material-symbols-outlined">code</span>
+      Technology Stack
+    </h3>
+    <div class="tech-grid">
+      @for (group of techStack; track group.category) {
+        <div class="tech-group">
+          <h4 class="tech-category">{{ group.category }}</h4>
+          <ul class="tech-list">
+            @for (item of group.items; track item) {
+              <li class="tech-item">{{ item }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- API Endpoints -->
+  <div class="arch-detail-section">
+    <h3 class="arch-section-title">
+      <span class="material-symbols-outlined">api</span>
+      Key API Endpoints
+    </h3>
+    <div class="api-table">
+      @for (ep of apiEndpoints; track ep.path) {
+        <div class="api-row">
+          <span class="api-method" [class]="'method-' + ep.method.toLowerCase()">{{ ep.method }}</span>
+          <code class="api-path">{{ ep.path }}</code>
+          <span class="api-desc">{{ ep.desc }}</span>
+          @if (ep.auth) {
+            <span class="api-auth">
+              <span class="material-symbols-outlined">lock</span>
+            </span>
+          } @else {
+            <span class="api-public">
+              <span class="material-symbols-outlined">lock_open</span>
+            </span>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Cost Badge -->
+  <div class="arch-cost-section">
+    <div class="cost-badge">
+      <div class="cost-celebration">
+        <span class="sparkle sparkle-1">✨</span>
+        <span class="sparkle sparkle-2">🎉</span>
+        <span class="sparkle sparkle-3">✨</span>
+      </div>
+      <span class="material-symbols-outlined">payments</span>
+      <div class="cost-info">
+        <span class="cost-label">Monthly Cost</span>
+        <span class="cost-value">$0<span class="cost-asterisk">*</span></span>
+      </div>
+      <span class="cost-note">*GCP free tier + Supabase + Upstash + Vercel free plans</span>
+      <span class="cost-vibe">( ᐛ )و</span>
+    </div>
+  </div>
+
+  <!-- Footer Quote -->
+  <div class="arch-footer-quote">
+    "Why is it over-engineered? Because I can. And because I'm bored."
+  </div>
+</div>

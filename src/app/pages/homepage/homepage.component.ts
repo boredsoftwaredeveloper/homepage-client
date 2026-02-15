@@ -9,6 +9,7 @@ import { AchievementsComponent } from '../../components/achievements/achievement
 import { AspirationsComponent } from '../../components/aspirations/aspirations.component';
 import { RegretStreamComponent } from '../../components/regret-stream/regret-stream.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ArchitectureDialogComponent } from '../../components/architecture-dialog/architecture-dialog.component';
 
 @Component({
   selector: 'app-homepage',
@@ -24,6 +25,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     AspirationsComponent,
     RegretStreamComponent,
     FooterComponent,
+    ArchitectureDialogComponent,
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',

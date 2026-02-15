@@ -7,3 +7,4 @@ export { AchievementsComponent } from './achievements/achievements.component';
 export { AspirationsComponent } from './aspirations/aspirations.component';
 export { RegretStreamComponent } from './regret-stream/regret-stream.component';
 export { FooterComponent } from './footer/footer.component';
+export { ArchitectureDialogComponent } from './architecture-dialog/architecture-dialog.component';
