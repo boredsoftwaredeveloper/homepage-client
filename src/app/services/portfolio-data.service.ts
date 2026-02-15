@@ -93,7 +93,7 @@ export class PortfolioDataService {
       {
         id: 'maxxton',
         company: 'Maxxton',
-        role: 'SDE → Senior → Lead',
+        role: 'SDE → Lead → Sead',
         roleStyle: 'tag',
         description:
           'Witnessed the sheer volume of dumb questions it took to get here. From breaking prod to leading the team that fixes prod.',
