@@ -1,0 +1,34 @@
+<div class="hero-card glass-card">
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div class="hero-info">
+      <div class="status-pill">
+        <span class="status-dot animate-pulse"></span>
+        {{ hero.systemStatus }}
+      </div>
+
+      <h1 class="hero-heading">
+        Hi, I'm <span class="accent">{{ hero.name }}.</span>
+      </h1>
+
+      <p class="hero-description">{{ hero.description }}</p>
+
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-label">Server Response</div>
+          <div class="stat-value accent">{{ hero.serverResponse }}</div>
+        </div>
+        <div class="stat stat-bordered">
+          <div class="stat-label">Status</div>
+          <div class="stat-value">{{ hero.currentStatus }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrapper">
+      <div class="photo-glow"></div>
+      <img [src]="hero.imageUrl" [alt]="hero.name" class="hero-photo" />
+    </div>
+  </div>
+</div>

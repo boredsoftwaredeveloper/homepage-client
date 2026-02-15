@@ -1,0 +1,24 @@
+<div class="achievements-card glass-card">
+  <h3 class="section-heading">
+    <span class="material-symbols-outlined section-icon">emoji_events</span>
+    Accidental Wins
+  </h3>
+
+  <div class="achievements-list">
+    @for (item of achievements; track item.id) {
+      <div class="achievement-item">
+        <div class="achievement-emoji" [class]="'emoji-' + item.variant">{{ item.emoji }}</div>
+        <div class="achievement-body">
+          <div class="achievement-header">
+            <span class="achievement-title">{{ item.title }}</span>
+            <span class="achievement-stat">{{ item.statLabel }}: {{ item.statValue }}</span>
+          </div>
+          <div class="achievement-subtitle">{{ item.subtitle }}</div>
+          <div class="progress-track">
+            <div class="progress-fill" [class]="'fill-' + item.variant" [style.width.%]="item.progressPercent"></div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

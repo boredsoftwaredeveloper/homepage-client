@@ -1,0 +1,64 @@
+<div class="paper-trail-section">
+  <h2 class="section-heading">
+    <span class="material-symbols-outlined section-icon">article</span>
+    Technical Paper Trail
+  </h2>
+
+  <div class="trail-grid">
+    @for (item of items; track item.id) {
+      @if (item.variant === 'dark') {
+        <a [href]="item.href" target="_blank" class="trail-card variant-dark">
+          <div class="trail-card-body">
+            <div class="trail-card-top">
+              <div class="trail-icon-box">
+                <span class="material-icons-outlined">{{ item.icon }}</span>
+              </div>
+              <span class="material-icons-outlined trail-action-icon">{{ item.actionIcon }}</span>
+            </div>
+            <h3 class="trail-title">{{ item.title }}</h3>
+            <p class="trail-desc">{{ item.description }}</p>
+          </div>
+          <div class="trail-footer">
+            <span>{{ item.footerText }}</span>
+          </div>
+        </a>
+      }
+
+      @if (item.variant === 'primary') {
+        <a [href]="item.href" target="_blank" class="trail-card variant-primary">
+          <div class="trail-card-body">
+            <div class="trail-card-top">
+              <div class="trail-icon-box">
+                <span class="material-icons-outlined">{{ item.icon }}</span>
+              </div>
+              <span class="material-icons-outlined trail-action-icon">{{ item.actionIcon }}</span>
+            </div>
+            <h3 class="trail-title">{{ item.title }}</h3>
+            <p class="trail-desc">{{ item.description }}</p>
+          </div>
+          <div class="trail-footer">
+            <span>{{ item.footerText }}</span>
+          </div>
+        </a>
+      }
+
+      @if (item.variant === 'violet') {
+        <button (click)="onItemClick(item)" class="trail-card variant-violet">
+          <div class="trail-card-body">
+            <div class="trail-card-top">
+              <div class="trail-icon-box">
+                <span class="material-symbols-outlined">{{ item.icon }}</span>
+              </div>
+              <span class="material-icons-outlined trail-action-icon">{{ item.actionIcon }}</span>
+            </div>
+            <h3 class="trail-title">{{ item.title }}</h3>
+            <p class="trail-desc">{{ item.description }}</p>
+          </div>
+          <div class="trail-footer">
+            <span>{{ item.footerText }}</span>
+          </div>
+        </button>
+      }
+    }
+  </div>
+</div>

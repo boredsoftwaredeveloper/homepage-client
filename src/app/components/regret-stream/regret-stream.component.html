@@ -1,0 +1,77 @@
+<div class="stream-card glass-card">
+  <div class="stream-header">
+    <div class="stream-header-inner">
+      <h2 class="stream-title">
+        <span class="material-symbols-outlined stream-icon">rss_feed</span>
+        Regret Stream
+      </h2>
+      <div class="stream-live">
+        <span class="live-dot animate-pulse"></span>
+        Live from localhost
+      </div>
+    </div>
+  </div>
+
+  <div class="stream-feed">
+    @for (post of feed; track post.id) {
+      <div class="feed-post">
+        <div class="post-header">
+          <div class="post-avatar">{{ post.avatar }}</div>
+          <div>
+            <div class="post-author">{{ post.author }}</div>
+            <div class="post-meta">{{ post.timestamp }} • {{ post.location }}</div>
+          </div>
+        </div>
+
+        @if (post.contentType === 'code' && post.codeSnippet) {
+          <div class="code-preview">
+            <div class="code-window">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              @for (line of post.codeSnippet.lines; track $index) {
+                <div>
+                  @for (seg of line.segments; track $index) {
+                    @switch (seg.type) {
+                      @case ('keyword') { <span class="code-keyword">{{ seg.text }}</span> }
+                      @case ('function') { <span class="code-function">{{ seg.text }}</span> }
+                      @case ('comment') { <span class="code-comment">{{ seg.text }}</span> }
+                      @case ('value') { <span class="code-value">{{ seg.text }}</span> }
+                      @default { <span class="code-plain">{{ seg.text }}</span> }
+                    }
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        @if (post.contentType === 'image' && post.imageContent) {
+          <div class="image-preview">
+            <span class="image-emoji">{{ post.imageContent.emoji }}</span>
+            <h3 class="image-title">{{ post.imageContent.title }}</h3>
+          </div>
+        }
+
+        <div class="post-actions">
+          <div class="action-icons">
+            <span class="material-icons-outlined action-icon icon-heart">favorite_border</span>
+            <span class="material-icons-outlined action-icon icon-chat">chat_bubble_outline</span>
+            @if (post.contentType === 'code') {
+              <span class="material-icons-outlined action-icon icon-share">share</span>
+            }
+          </div>
+          <p class="post-caption">
+            <span class="caption-author">{{ post.author }}</span>
+            {{ post.caption }}
+            @for (tag of post.hashtags; track tag) {
+              <span class="hashtag"> {{ tag }}</span>
+            }
+          </p>
+        </div>
+      </div>
+    }
+  </div>
+</div>

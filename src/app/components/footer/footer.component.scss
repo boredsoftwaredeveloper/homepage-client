@@ -1,0 +1,33 @@
+.site-footer {
+  margin-top: 16px;
+  border-top: 1px solid var(--color-border);
+  padding: 24px 0 32px;
+  text-align: center;
+}
+
+.footer-disclaimer {
+  font-size: 14px;
+  color: var(--color-subtext);
+  font-weight: 500;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.footer-link {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+}

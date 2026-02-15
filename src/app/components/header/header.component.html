@@ -1,0 +1,26 @@
+<header class="site-header">
+  <a class="logo" href="https://boredsoftwaredeveloper.xyz/" target="_blank" tabindex="0">
+    <span class="material-icons-outlined logo-icon">terminal</span>
+    <span class="logo-text">
+      bored_dev<span class="logo-accent">.xyz</span>
+    </span>
+  </a>
+
+  <div class="header-actions">
+    <nav class="nav-links">
+      @for (link of navLinks; track link.label) {
+        <a [href]="link.href" target="_blank" class="nav-link">
+          <i [class]="link.iconClass"></i> {{ link.label }}
+        </a>
+      }
+    </nav>
+    <div class="divider"></div>
+    <button (click)="theme.toggle()" aria-label="Toggle Dark Mode" class="theme-toggle">
+      @if (theme.isDark()) {
+        <span class="material-icons-outlined icon-light">light_mode</span>
+      } @else {
+        <span class="material-icons-outlined">dark_mode</span>
+      }
+    </button>
+  </div>
+</header>
