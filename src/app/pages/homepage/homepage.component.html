@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <app-paper-trail />
+  <app-paper-trail (openArchitecture)="openCard('architecture')" />
 
   <div class="main-content-row">
     <div class="left-col">
@@ -47,6 +47,7 @@
         @case ('achievements') { <app-achievements /> }
         @case ('aspirations') { <app-aspirations /> }
         @case ('regret-stream') { <app-regret-stream /> }
+        @case ('architecture') { <app-architecture-dialog (closeDialog)="closeCard()" /> }
       }
     </div>
   </div>
