@@ -99,3 +99,67 @@
     color: var(--color-primary-light);
   }
 }
+
+// ── Auth button ────────────────────────────────────────────────────
+
+.auth-divider {
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.auth-btn {
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  color: var(--color-subtext);
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .material-icons-outlined {
+    font-size: 18px;
+  }
+}
+
+.login-label {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.auth-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-email {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--color-subtext);
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.logout-btn {
+  padding: 6px;
+}

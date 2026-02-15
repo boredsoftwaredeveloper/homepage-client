@@ -5,7 +5,7 @@
   </h3>
 
   <div class="achievements-list">
-    @for (item of achievements; track item.id) {
+    @for (item of achievements(); track item.id) {
       <div class="achievement-item">
         <div class="achievement-emoji" [class]="'emoji-' + item.variant">{{ item.emoji }}</div>
         <div class="achievement-body">
