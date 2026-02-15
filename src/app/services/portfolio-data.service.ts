@@ -84,28 +84,28 @@ export class PortfolioDataService {
       {
         id: 'deloitte',
         company: 'Deloitte',
-        role: 'Consultant / Current Purgatory',
+        role: 'SDE 2 / Designation says Consultant',
         roleStyle: 'tag',
         description:
-          'Over-engineering microservices because simple CRUD is for people with more hobbies. Currently figuring out how to make PowerPoint slides that compile.',
+          'Writing microservices and over-engineering solutions because simple CRUD doesn\'t spark joy. Designation says Consultant but I haven\'t consulted anyone — just shipping code and pretending the architecture diagram makes sense.',
         sortOrder: 1,
       },
       {
         id: 'maxxton',
         company: 'Maxxton',
-        role: 'SDE → Senior → Lead',
+        role: 'SDE → Lead → SDE 2',
         roleStyle: 'tag',
         description:
-          'Witnessed the sheer volume of dumb questions it took to get here. From breaking prod to leading the team that fixes prod.',
+          'Where I actually became a developer. Broke prod, fixed prod, led the team that broke prod again. Asked enough dumb questions to mass produce an FAQ. Everything I know about real engineering, I learned here.',
         sortOrder: 2,
       },
       {
         id: 'tcs',
         company: 'TCS',
-        role: 'WFM implementation for Dayforce',
+        role: 'Implementation Consultant / Dayforce',
         roleStyle: 'tag',
         description:
-          'Basically learning how corporate hierarchies work while writing minimal code. Mastered the art of looking busy and filling timesheets.',
+          'Zero code written. 100% config. Learned how corporate hierarchies work by clicking dropdowns in Dayforce and filling timesheets with a straight face. Technically "tech" but let\'s not kid ourselves.',
         sortOrder: 3,
       },
       {
@@ -114,7 +114,7 @@ export class PortfolioDataService {
         role: 'Fee < 1 Lakh',
         roleStyle: 'badge',
         description:
-          'Spent 4 years and less than 1L to learn how to ignore physics and write code instead.',
+          'Spent 4 years and less than 1L to learn how to ignore physics and write code instead. Best ROI of my life.',
         sortOrder: 4,
       },
     ];
