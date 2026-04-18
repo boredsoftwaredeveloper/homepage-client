@@ -99,12 +99,13 @@ export class ArchitectureDialogComponent {
   Version: 1.0.0 | Date: 2026-02-15
 ================================================================================
 
-STATUS: STATIC FE ONLY (for now)
----------------------------------
-Right now this is all blueprint — the backend exists in code, tests pass,
-Docker images build, but nothing is deployed to GCP yet. The Angular app
-serves static data. Once Cloud Run is up, this whole diagram goes live.
-Until then? Just an over-engineered dream with a passing CI build.
+STATUS: LIVE ON GCP CLOUD RUN
+------------------------------
+API Gateway, Profile Service, and Regret Stream Service are deployed to
+us-central1 behind api.boredsoftwaredeveloper.xyz. Reads are public,
+writes require a Supabase JWT validated via the project's JWKS. All
+three services scale to zero when idle, so the first request after a
+quiet period pays a cold-start penalty.
 
 OVERVIEW
 --------
