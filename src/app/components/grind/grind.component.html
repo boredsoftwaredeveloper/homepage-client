@@ -5,7 +5,7 @@
   </h2>
 
   <div class="timeline">
-    @for (exp of experience; track exp.id; let isLast = $last) {
+    @for (exp of experience(); track exp.id; let isLast = $last) {
       <div class="timeline-item" [class.no-pad]="isLast">
         <div class="timeline-dot"></div>
 

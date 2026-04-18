@@ -22,5 +22,23 @@
         <span class="material-icons-outlined">dark_mode</span>
       }
     </button>
+    <div class="divider auth-divider"></div>
+    @if (auth.isLoggedIn()) {
+      <div class="auth-user">
+        <span class="user-email">{{ auth.email() }}</span>
+        <button (click)="logout()" class="auth-btn logout-btn" aria-label="Log out">
+          <span class="material-icons-outlined">logout</span>
+        </button>
+      </div>
+    } @else {
+      <button (click)="openLogin()" class="auth-btn login-btn" aria-label="Log in">
+        <span class="material-icons-outlined">login</span>
+        <span class="login-label">Login</span>
+      </button>
+    }
   </div>
 </header>
+
+@if (showLoginDialog()) {
+  <app-login-dialog (closed)="closeLogin()" />
+}

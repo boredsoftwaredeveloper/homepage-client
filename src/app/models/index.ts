@@ -7,3 +7,4 @@ export { Aspiration } from './aspiration.model';
 export { FeedPost, CodeSnippet, CodeLine, CodeSegment, ImageContent } from './feed-post.model';
 export { NavLink } from './nav-link.model';
 export { FooterData, FooterLink } from './footer.model';
+export { AuthResponse, OAuthUrlResponse } from './auth.model';

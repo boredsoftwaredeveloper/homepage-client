@@ -5,7 +5,7 @@
   </h3>
 
   <div class="aspirations-list">
-    @for (item of aspirations; track item.id) {
+    @for (item of aspirations(); track item.id) {
       <div class="aspiration-item">
         <div class="aspiration-header">
           <span class="aspiration-title">{{ item.title }}</span>
