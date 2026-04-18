@@ -16,12 +16,12 @@
     </div>
   </div>
 
-  <!-- Status Disclaimer -->
-  <div class="arch-disclaimer">
-    <span class="material-symbols-outlined disclaimer-icon">construction</span>
+  <!-- Status Banner -->
+  <div class="arch-disclaimer arch-disclaimer--live">
+    <span class="material-symbols-outlined disclaimer-icon">cloud_done</span>
     <div class="disclaimer-content">
-      <span class="disclaimer-title">Currently vibes-only (static FE)</span>
-      <span class="disclaimer-text">Everything you see here is the blueprint — the backend exists in code, not in the cloud (yet). Once GCP Cloud Run is up and running, this whole diagram becomes real. Until then, it's just an Angular app flexing a Swagger doc it can't actually call. Bear with me.</span>
+      <span class="disclaimer-title">Live on GCP Cloud Run</span>
+      <span class="disclaimer-text">API Gateway, Profile Service, and Regret Stream Service are deployed to us-central1 behind <code>api.boredsoftwaredeveloper.xyz</code>. Reads are public, writes require a Supabase JWT. Scales to zero when idle — expect a cold-start on the first request.</span>
     </div>
   </div>
 

@@ -476,3 +476,22 @@ ul, ol { list-style: none; }
 .disclaimer-title { font-size: 13px; font-weight: 600; color: #d97706; font-family: var(--font-mono); }
 .dark .disclaimer-title { color: #fbbf24; }
 .disclaimer-text { font-size: 12px; color: var(--color-subtext); line-height: 1.5; font-family: var(--font-mono); }
+
+/* "Live" variant — green success styling (used when the BE is deployed) */
+.arch-disclaimer--live {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.06));
+  border-color: rgba(16, 185, 129, 0.25);
+}
+.dark .arch-disclaimer--live {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(52, 211, 153, 0.08));
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.arch-disclaimer--live .disclaimer-icon { color: #10b981; }
+.arch-disclaimer--live .disclaimer-title { color: #047857; }
+.dark .arch-disclaimer--live .disclaimer-title { color: #34d399; }
+.arch-disclaimer--live .disclaimer-text code {
+  background: rgba(16, 185, 129, 0.12);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 11px;
+}
